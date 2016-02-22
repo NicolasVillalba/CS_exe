@@ -1,7 +1,7 @@
 
-###原创作品转载请注明出处
+####原创作品转载请注明出处
 
-###汪利飞《Linux内核分析》MOOC课程http://mooc.study.163.com/course/USTC-10000290
+####汪利飞《Linux内核分析》MOOC课程http://mooc.study.163.com/course/USTC-10000290
 
 
 ##一. 32位部分存储器小结
@@ -60,6 +60,7 @@ movl (%ebx),%edx
 
 
 ##三. 将c语言编译成汇编语言
+[汇编语言AT&T与Intel语法区别参考](http://www.ibm.com/developerworks/cn/linux/l-assembly/)
 
 ```c
 //main.c
