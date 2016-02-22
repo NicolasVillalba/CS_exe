@@ -81,19 +81,6 @@ int main()
 ```
 ![main.c](shell_ch1_c.png)
 
-
-
-
-
-```sh
-$ gcc -S -o main.c main.s -m32
-//在64位linux系统中将c语言编译成汇编语言
-```
-
-
-
-
-
 ```c
 //main.s汇编语言,本例是删除.*文件,利于分析纯汇编语言
 g:
