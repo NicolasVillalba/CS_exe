@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 1000
+#define N 100
 
 int check(int *n) {
     if(*n % 5 != 1) return 0;
