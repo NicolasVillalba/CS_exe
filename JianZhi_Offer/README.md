@@ -3,7 +3,7 @@
 
 |NO.|Question|Solution|Add Date|
 |---|--------|--------|----------|
-|42|[翻转单词顺序VS左旋转字符串](42/README.md)|[C](42/solution.h)|2016/03/07|
+|42|[翻转单词顺序VS左旋转字符串](42/README.md)|[C](42/solution.c)|2016/03/07|
 
 
 
