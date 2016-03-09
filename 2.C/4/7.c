@@ -6,9 +6,11 @@
 
 int Count(int n, int m)
 {
-	while(n != 0 && m != 0)
-	{
-		return (Count(n - 1, m) + Count(n, m - 1));
+	if(n == 0 && m ==1 || n==1&&m==0) return 1;
+	else if(m > 0&& n > 0) return (Count(n - 1, m) + Count(n, m - 1));
+	else {
+			if(n == 0) return Count(n, m - 1);
+			else return Count(n - 1, m);
 	}
 }
 

@@ -3,8 +3,8 @@
 [答案](1.c)
 
 > 2.将 字 符 串 中 的 空 格 替 换 成 “%020” ， 例 如 “hello world how ”->”hello%020%020%020world%020%020%020how%020%020%020%020”
-
 [答案](2.c)
+
 
 > 3.删除字符串中指定的字符。 例如 “ abcdaefaghiagkl“ 删除‘a’,以后： “ bcdefghigkl”
 
@@ -259,9 +259,11 @@ int main()
 
 int Count(int n, int m)
 {
-	while(n != 0 && m != 0)
-	{
-		return (Count(n - 1, m) + Count(n, m - 1));
+	if(n == 0 && m ==1 || n==1&&m==0) return 1;
+	else if(m > 0&& n > 0) return (Count(n - 1, m) + Count(n, m - 1));
+	else {
+			if(n == 0) return Count(n, m - 1);
+			else return Count(n - 1, m);
 	}
 }
 
@@ -272,8 +274,6 @@ int main()
 	scanf("%d%d", &n, &m);
 	int count = Count(n, m);
 	printf("%d\n", count);
-	return 0;
-}
-
+	re
 ```
 
