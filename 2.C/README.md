@@ -1,2 +1,2 @@
-This a repo for the C language knowledge.
+This is a repo for the C language knowledge.
 ==============================================
