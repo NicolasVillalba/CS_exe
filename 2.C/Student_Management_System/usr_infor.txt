@@ -1,0 +1,4 @@
+0 AverageJg 48 4.00
+1 AverageJoeWang 2048 2.00
+2 JoeWang 2 2.00
+12 wlf 12 100.00
