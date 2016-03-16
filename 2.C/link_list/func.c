@@ -21,10 +21,10 @@ void link_tail_insert(pstu *phead, pstu *ptail, int n)//尾插法
 {
 	pstu pnew = (pstu)malloc(sizeof(stu));     
 	memset(pnew, 0, sizeof(stu));//结点初始化
-   pnew->num = n;
+    pnew->num = n;
 	if(*ptail == NULL)
 	{
-		  *phead = pnew;
+		  *phead = pnew; 
         *ptail = pnew;		
 	}else{
 			(*ptail) -> pnext = pnew;//将我们新增的结点赋值给原有结点的pnext
@@ -40,7 +40,7 @@ void link_sort_insert(pstu *phead, pstu *ptail, int n)
 	pstu ppre;
 	pstu pnew = (pstu)malloc(sizeof(stu));     
 	memset(pnew, 0, sizeof(stu));//结点初始化
-   pnew->num = n;
+    pnew->num = n;
 	if(*phead == NULL)//判断为空
 	{
 		*phead = pnew;
