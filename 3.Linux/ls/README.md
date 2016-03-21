@@ -200,3 +200,5 @@ char * gid_to_name(gid_t gid)
         return grp_ptr->gr_name;
 }
 ```
+
+![运行结果](ls2.jpg)
