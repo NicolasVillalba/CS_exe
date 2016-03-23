@@ -27,7 +27,6 @@ int main()
     
     fclose(fp);//关闭文件
     
-    
     //以下为读完了之后对数组进行冒泡排序，按照abcd...的顺序排列
     for(int i = 0; i < 10; i++)
     {
@@ -43,11 +42,7 @@ int main()
     }
     
     
-    //最后输出数组
-    for(int i = 0; i < 10; i++)
-    {
-        printf("%c", b[i]);
-    }
-     printf("\n");
+    //最后输出已经排序好的字符串数组
+    printf("%s\n", b);
     return 0;
 }
