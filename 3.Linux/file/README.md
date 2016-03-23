@@ -48,7 +48,7 @@ int creat(const char *pathname, mode_t mode);	//文件名  权限   //现在已�
 |------------------|------------------------------|
 |O_RDONLY|	以只读的方式打开|
 |O_WRONLY	|以只写的方式打开|
-|O_RDWRv|	以读写的方式打开|
+|O_RDWR|	以读写的方式打开|
 |O_CREAT	|如果文件不存在，则创建文件|
 |O_EXCL|	仅与O_CREAT连用，如果文件已存在，则强制open失败|
 |O_TRUNC|	如果文件存在，将文件的长度截至0|
