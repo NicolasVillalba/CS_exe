@@ -7,7 +7,7 @@
 int main()
 {
     FILE *fp;
-    fp = fopen("test.txt", "r");// 打开文件，后面需要关闭
+    fp = fopen("test.txt", "r");// 打开文件，后面需要关闭，那个test.txt文件和代码文件是在一个文件夹里面
     if(fp == NULL)//判断文件是否打开成功
     {
         printf("file open failed!\n");//加入打开失败则输出这个语句
