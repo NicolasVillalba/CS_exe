@@ -1,85 +1,80 @@
- ///
- /// @file    1_point.cpp
- /// @author  AverageJoeWang(AverageJoeWang@gmail.com)
- ///
- 
 #include <iostream>
 using std::cout;
 using std::endl;
 
-
-
-class point
+class Point
 {
-private:
-	int xPos;
-	int yPos;
-
 public:
-	point(int x = 0, int y = 0)
+	Point(int a = 0, int b = 0)
 	{
-		xPos = x;
-		yPos = y;
+		x = a;
+		y = b;
+		cout << "Point(int a = 0, int b = 0)" << endl;
 	}
 
-	void disp()
+	int getX()
 	{
-		cout << "(" << xPos << "," << yPos << ")" << endl;
+		return x;
 	}
 
-	int GetX()
+	int getY()
 	{
-		return xPos;
+		return y;
 	}
 
-	int GetY()
+	~Point()
 	{
-		return yPos;
+		cout << "~Point()" << endl;
 	}
-
-	~point()
-	{
-		cout << "~point()" << endl;
-	}
+private:
+	int x;
+	int y;
 };
 
 
-class point3D:point //3维，从point类继承而来
+//public继承，子类对象能够调用基类的成员函数
+//private继承，子类对象不能够调用基类的成员函数
+
+class Point3D:private Point //继承分public, private，protected,默认是private的
 {
-private:
-	int zPos;
-
 public:
-	point3D(int x, int y, int z)
-	: point(x, y)//派生类构造函数，初始化表中调用基类构造函数
+	Point3D(int a, int b, int c = 0)
+	: Point(a, b)
 	{
-		zPos = z;
-		cout << "point3D(int x, int y, int z)" << endl;
-	//派生类构造函数，初始化表中调用基类构造函数
+		z = c;
+		cout << "Point3D(int a, int b, int c)" <<endl;
 	}
 
-	void disp()//隐藏了基类中同名的disp函数
+	int getZ()
 	{
-		cout << "(" << GetX() << "," << GetY() << "," << zPos << ")" << endl;
+		return z;
 	}
 
-	int calcSum()//增加计算3个数据成员和的函数
+	int CalSum()
 	{
-		return GetX()+GetY() + zPos;
+		return getX() + getY()+z;
 	}
+	
+	~Point3D()
+	{
+		cout << "~Point3D()" << endl;
+	}
+private:
+	int z;
 };
 
 
 int main()
 {
-	point pt1(7 , 8);
-	pt1.disp();
+	Point p1;
+	Point p2(2, 3);
+	cout << "(" << p2.getX() << ", " << p2.getY() << ")" << endl;
+	
+	Point3D pp2(1, 2, 3);
+//	cout << "(" << pp2.getX() << ", " << pp2.getY() << ", " << pp2.getZ() << ")" <<endl;
+	cout << "getZ() = " << pp2.getZ() <<endl;
 
-	point3D pt2(3, 4, 5);
-	pt2.disp();
-
-	int res = pt2.calcSum();//计算pt2中3个坐标信息的累加和
-	cout << res << endl;
+	cout << pp2.CalSum() << endl;
 
 	return 0;
 }
