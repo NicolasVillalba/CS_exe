@@ -1,4 +1,4 @@
- ///
+//
  /// @file    6_nestClassTemplate.cpp
  /// @author  AverageJoeWang(AverageJoeWang@gmail.com)
  ///
