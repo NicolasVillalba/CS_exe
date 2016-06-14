@@ -34,7 +34,7 @@ int main(int argc, char* argv[])
 		close(fd);
 		return -1;
 	}
-
+//获取文件类型，st_mode
 	if(S_ISREG(buf.st_mode))
 		cout << "It is a regular file!" << endl;
 	else if(S_ISDIR(buf.st_mode))
@@ -44,6 +44,7 @@ int main(int argc, char* argv[])
 
 	cout << "The size of the file is " << buf.st_size << endl; 
 
+//获取文件的修改，创建等时间
 	printf("atime = %d, mtime = %d, ctime = %d\n",buf.st_atime, buf.st_mtime, buf.st_ctime);
 
 	struct tm *pt = gmtime(&(buf.st_atime));

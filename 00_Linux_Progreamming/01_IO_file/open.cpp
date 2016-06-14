@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
 using std::cout;
@@ -20,12 +21,14 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
-	int ret;
-	ret = open(argv[1], O_RDWR|O_CREAT);
-	if(-1 == ret)
+	int fd;
+	fd = open(argv[1], O_RDWR|O_CREAT);
+	if(-1 == fd)
 	{	
 		perror("open fail\n");
 		return -1;
-	}else printf("open success !\n");
+	}else 
+		printf("open success !\n");
+	close(fd);
 	return 0;
 }
